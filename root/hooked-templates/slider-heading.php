@@ -56,13 +56,13 @@ function birch_slider_heading(){
 		<ul class="slides">
 			<li class="a"
 			 data-thumb="<?php echo get_stylesheet_directory_uri()?>\images\shoe-logos\resized\converse.png">
-<!--				<img src="<?php echo get_stylesheet_directory_uri()?>/images/transparent-pixel.gif" alt="">-->
-<!--			<a href="#" class="button"><i class="fa fa-snowflake-o" aria-hidden="true"></i>more</a>-->
-			</li>
+
+<!--			<a href="#" class="button"><i class="fa fa-snowflake-o" aria-hidden="true"></i>more</a>-->  
+			</li> 
 			<li class="b"
 				 data-thumb="<?php echo get_stylesheet_directory_uri()?>\images\shoe-logos\resized\dress.png">
 				
-<!--					<img src="<?php echo get_stylesheet_directory_uri()?>/images/transparent-pixel.gif" alt="">-->
+
 <!--				<a href="#" class="button"><i class="fa fa-free-code-camp" aria-hidden="true"></i>more</a>-->
 			</li>
 			<li class="c"
@@ -71,15 +71,15 @@ function birch_slider_heading(){
 			<img src="<?php echo get_stylesheet_directory_uri()?>/images/image-anchors/high-heels.png" alt="">
 <!--				<a href="#" class="button">more</a>-->
 			</li>
-			
+			 
 		</ul>
 		
-	</div>
-	<div class="water-mark"></div>
-	</div><!--	#heading-slider-->
+		</div>
+		<div class="water-mark"></div>
+</div><!--	#heading-slider-->
 	
 <?php
-}//birch_slider_header
+}//birch_slider_header()
 
 add_action('storefront_before_content','birch_slider_heading'); 
 //jQuery FlexSlider v2.6.3	
