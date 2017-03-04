@@ -87,6 +87,7 @@ gulp.task('watch', function() {
   gulp.watch(jsSources, ['js']);
   gulp.watch(['./sass/*.scss', './sass/*/*.scss'], ['sass']);
   gulp.watch(rootDir, ['root']);
+  gulp.watch(sassThemeSources, ['sassTheme']);
 });
 
 
