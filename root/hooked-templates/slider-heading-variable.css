@@ -1,0 +1,66 @@
+/*************************************
+li.a	
+***************************************/
+
+li.a{
+		background-image: url(<?php echo get_field('slide_1')['url']?>);
+		
+	}
+
+
+/*************************************
+li.b
+***************************************/
+	
+	li.b{
+		background-image: url(<?php echo get_field('slide_2')['url']?>);
+	}
+	
+
+
+/**************************************
+*li.c
+****************************************/
+
+	li.c{
+		background-image: url(<?php echo get_field('slide_3')['url']?>);
+	}
+
+
+.birch-slider ul.slides li.c img {
+		position: absolute;
+    width: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 179px;
+    border: 3px solid black;
+}
+
+
+/***************************************
+*	water mark
+******************************************************************/
+	div.water-mark{
+		background:url(<?php echo get_stylesheet_directory_uri()?>/images/shoe-logos/quality.png);
+		width:200px;
+		height:200px;
+		background-size:cover;
+		position:absolute;
+		top:100px;
+		left:100px;
+		background-color: rgba(255, 255, 255, 0.6);
+    	border-radius: 100px;
+		
+	}
+
+
+/***************************************
+* birch masthead	
+*
+*****************************************/
+header#masthead.site-header {
+    background-color: rgba(0, 0, 0, 0.66);
+    position: absolute;
+    width: 100%; 
+}	
