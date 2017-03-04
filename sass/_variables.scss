@@ -1,0 +1,47 @@
+$base-font: 		"Source Sans Pro", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$header-font: 		$base-font;
+$ms-base:           1em, .875em;
+$ms-ratio:          1.618;
+
+//header
+$masthead_col :850px;
+$header_background : rgba(0, 0, 0, 1); 
+
+
+// base color scheme
+$body-background: 	#ffffff;
+$color_body: 		#43454b;
+$color_links: 		#2c2d33;
+$color_border:		rgba(0,0,0,0.05);
+$color_woocommerce: #96588a;
+$error: 			#e2401c;
+$success: 			#0f834d;
+$info: 				#3D9CD2;
+
+// Media Breakpoints 
+$full:               960px;
+$desktop:			       768px;
+$below_desktop:      $desktop - 1;
+$handheld:			     568px;
+
+
+// Layout Sizes
+$container-width:	   67.141em;
+
+//logo
+$logo_width:147px;
+
+
+//Sussy Defaults
+$susy: (
+	columns: 12,
+	gutters: 1,
+	math: fluid,
+	output: float,
+	gutter-position: after,
+
+	use-custom: (
+		box-sizing: false
+	)
+);
+

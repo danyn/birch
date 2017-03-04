@@ -1,0 +1,27 @@
+/*
+Theme Name:		Birch Compiled
+Theme URI:		https://github.com/danyn/birch
+Description:	A Storefront child theme designed for small WooCommerce stores.
+Author:			danyn
+Author URI:		https://github.com/danyn
+Template:		storefront
+Version:		1.0
+License: 		GNU General Public License v2 or later
+License URI: 	http://www.gnu.org/licenses/gpl-2.0.html
+Tags:			e-commerce, light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+Text Domain:	storefront
+*/
+/* =Birch styles starts here
+-------------------------------------------------------------- */
+
+//External Libraries
+@import "susy";
+
+//variables
+@import "variables";
+
+//Storefront Resets
+@import "extends/resets";
+//Masthead --> The Nav, The Cart, and The Logo 
+@import "modules/nav";
+

@@ -1,0 +1,27 @@
+{
+  "name": "workflows",
+  "version": "0.0.1",
+  "description": "a project to showcase workflows",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danyn/birch"
+  },
+  "author": "Daniel Eisen",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "3.9.x",
+    "gulp-util": "3.0.x",
+    "gulp-concat": "2.6.x",
+    "gulp-if": "1.2.4",
+    "gulp-uglify": "0.3.1",
+    "gulp-sass": "3.1.x",
+    "susy":"2.2.x",
+    "gulp-postcss": "6.3.x",
+    "gulp-sourcemaps": "2.4.x",
+    "autoprefixer": "6.7.x"
+  }
+}
