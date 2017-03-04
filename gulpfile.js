@@ -17,7 +17,7 @@ var env,
 env = 'development';
 
 if (env==='development') {
-  outputDir = '../birch-compiled/';
+  outputDir = '../birch-compiled-1.0.0/';
   sassStyle = 'expanded';
 } else {
   outputDir = '../birch-production/';
