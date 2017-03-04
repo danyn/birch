@@ -20,8 +20,8 @@ if (env==='development') {
   outputDir = '../birch-compiled-1.0.0/';
   sassStyle = 'expanded';
 } else {
-  outputDir = '../birch-production/';
-  sassStyle = 'compressed';
+  // outputDir = '../birch-production/';
+  // sassStyle = 'compressed';
 }
 
 //add as many scripts to this array they will be concatenated
@@ -32,10 +32,25 @@ jsSources = [
 //process Sass files from here
 sassSources = './sass/**/*.scss';
 
+//process Sass files for the theme extesions like the heading slider and heading image
+sassThemeSources = './sass_theme_extensions/**/*.scss';
+
 //copy over all files to be at the root  \ of the theme and deeper using glob *
 rootDir = ['./root/**/*'];
 
 //
+
+gulp.task('sassTheme', function () {
+ return gulp.src(sassThemeSources)
+  .pipe(sourcemaps.init())
+  .pipe(sass({
+    outputStyle:sassStyle,
+    includePaths:['node_modules/susy/sass']
+  }).on('error', sass.logError))
+  .pipe(sourcemaps.write())
+  .pipe(gulp.dest(outputDir + 'hooked-templates/'));
+});
+
 
 
 
@@ -87,6 +102,6 @@ gulp.task('prefix', function () {
 });
 
 
-gulp.task('default', ['watch','root', 'js','sass']);
+gulp.task('default', ['watch','root', 'js','sass','sassTheme']);
 
 
