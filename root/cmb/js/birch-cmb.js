@@ -1,7 +1,7 @@
 jQuery( document ).ready( function( $ ) {
     // $() will work as an alias for jQuery() inside of this function 
     
-		console.log("cc  admin-script.js ");
+		console.log("birch cmb.js ");
 		
 	
 //		console.log(heading_background_color);
