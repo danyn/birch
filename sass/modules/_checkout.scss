@@ -1,0 +1,27 @@
+.woocommerce-checkout{
+	.woocommerce-error {
+					background-color: #27759e;
+		}
+
+
+	.woocommerce-billing-fields{
+
+		.required {
+					color: #a29f71;
+		}	
+
+		.woocommerce-invalid{
+			input.input-text {
+						box-shadow: inset 2px 0 0 #27759e;
+			}
+		}
+
+		.woocommerce-validated{
+			 input.input-text {
+					box-shadow: inset 2px 0 0 #ffffff;
+			}
+		}
+
+
+	}
+}
