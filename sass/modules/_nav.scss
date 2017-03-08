@@ -50,6 +50,7 @@ header#masthead.site-header{
 		
 		nav#site-navigation{
 			@extend .reset-space;
+
 			
 			@media (min-width: $desktop){
 				width:auto !important;
@@ -63,7 +64,7 @@ header#masthead.site-header{
 				}//@media
 			}//.menu-toggle
 			
-			div.menu{
+			div.primary-navigation{
 				
 				//not mobile menu - all other menus
 				ul.nav-menu{
@@ -99,6 +100,7 @@ header#masthead.site-header{
 							padding-right:0.5em;
 							padding-top:20px;
 							padding-bottom:16px;
+							height: 67px;
 							 
 							@media(min-width:$full){
 								font-size:16px;	
