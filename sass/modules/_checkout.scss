@@ -1,27 +1,47 @@
-.woocommerce-checkout{
-	.woocommerce-error {
-					background-color: #27759e;
-		}
-
-
-	.woocommerce-billing-fields{
-
-		.required {
-					color: #a29f71;
-		}	
-
-		.woocommerce-invalid{
-			input.input-text {
-						box-shadow: inset 2px 0 0 #27759e;
-			}
-		}
-
-		.woocommerce-validated{
-			 input.input-text {
-					box-shadow: inset 2px 0 0 #ffffff;
-			}
-		}
-
-
+body.woocommerce-checkout{
+	#content.site-content  {
+		background-color: #fdfdfd;
 	}
+
+
+
+
+	.woocommerce-checkout{
+		.woocommerce-error {
+						background-color: #27759e;
+			}
+
+
+		.woocommerce-billing-fields{
+
+			.required {
+						color: #a29f71;
+			}	
+
+			.woocommerce-invalid{
+				input.input-text {
+							box-shadow: inset 2px 0 0 #27759e;
+				}
+			}
+
+			.woocommerce-validated{
+				 input.input-text {
+						box-shadow: inset 2px 0 0 #ffffff;
+				}
+			}
+
+
+		}
+	}
+	//proceed to paypal
+	#payment .place-order .button {
+		background-color: #3788b6;
+    border-color: #00b9eb;
+    color: #ffffff;
+    border-radius: 7px;
+		&:hover{
+			background-color:  #3c91c1;
+		}
 }
+}
+		
