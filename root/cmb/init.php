@@ -18,3 +18,16 @@ if ( file_exists( dirname( __FILE__ ) . '/page-meta.php' ) ) {
 if ( file_exists( dirname( __FILE__ ) . '/theme-options.php' ) ) {
 	require_once dirname( __FILE__ ) . '/theme-options.php';
 }
+
+
+function birch_cmb_admin() {
+
+	//load js
+	$deps_js = ['jquery'];
+	wp_enqueue_script('cc_js', get_stylesheet_directory_uri(). '/cmb/js/birch-cmb.js', $deps_js);
+	
+	
+}
+
+	add_action('admin_enqueue_scripts', 'birch_cmb_admin');
+
