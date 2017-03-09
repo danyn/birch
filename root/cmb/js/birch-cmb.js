@@ -57,21 +57,10 @@ jQuery( document ).ready( function( $ ) {
 	
 	$("input").change(function(){
 			$("#ih_statement").html($("#birch_heading_text").val());
-		  alert("changed");
-		
 	});
 	
 	
 } );//document.ready  
 
-
-
-
-
-
-
-
-//#birch_heading_text  cmb2 field
-//.ih_statement repre
 
 

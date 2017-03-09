@@ -25,6 +25,16 @@ function birch_metabox() {
 		
 	) );
 	
+	
+		$birch_image_heading->add_field( array(
+		'name' => esc_html__( 'Image Heading  Subtitle', 'cmb2' ),
+		'desc' => esc_html__(  'Enter A Short Statement To Follow the Main One', 'cmb2' ),
+		'id'   => $prefix . 'Subheading_text',
+		'type' => 'text',
+		
+	) );
+	
+	
 	$birch_image_heading->add_field( array(
 		'name'    => esc_html__( 'Background Color', 'cmb2' ),
 		'desc'    => esc_html__( 'Background Color Of The Image Header ', 'cmb2' ),

@@ -17,8 +17,8 @@ $heading_image = get_post_meta( get_the_ID(), 'birch_heading_image', true );
 		
 		.image_heading_statement{
 
-			padding-top:32px;
-			padding-bottom:10%;
+/*			padding-top:32px;*/
+/*			padding-bottom:10%;*/
 			font-size: 22px;
 			color: black;
 			line-height: 1.4;
@@ -55,10 +55,14 @@ add_action('admin_head', 'birch_image_heading_css',100);
 
 function birch_image_heading(){
 	$heading_text =  get_post_meta( get_the_ID(), 'birch_heading_text', true );
+	$subheading_text =  get_post_meta( get_the_ID(), 'birch_Subheading_text', true );
 		?>	 
 	 	<div class="image-heading" >
 			<div class="image_heading_statement" id="ih_statement">
 				<?php echo $heading_text;?>
+			</div>
+			<div class="image_heading_statement" id="ih_substatement">
+				<?php echo $subheading_text;?>
 			</div>
 	 	</div>
 	 	 
