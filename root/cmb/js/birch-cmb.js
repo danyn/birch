@@ -57,10 +57,13 @@ jQuery( document ).ready( function( $ ) {
 	
 	$("input").change(function(){
 			$("#ih_statement").html($("#birch_heading_text").val());
+
+			$("#ih_substatement").html($("#birch_Subheading_text").val());
+			
+			$(".image-heading").css("background-image",'url("' + $("#birch_heading_image").val() + '")');
+	
 	});
 	
-	
-} );//document.ready  
-
+} );//document.ready
 
 
