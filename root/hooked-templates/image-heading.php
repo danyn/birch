@@ -57,7 +57,7 @@ function birch_image_heading(){
 	$heading_text =  get_post_meta( get_the_ID(), 'birch_heading_text', true );
 		?>	 
 	 	<div class="image-heading" >
-			<div class="image_heading_statement">
+			<div class="image_heading_statement" id="ih_statement">
 				<?php echo $heading_text;?>
 			</div>
 	 	</div>
