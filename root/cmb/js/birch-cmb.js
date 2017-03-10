@@ -64,6 +64,32 @@ jQuery( document ).ready( function( $ ) {
 	
 	});
 	
+//$(".media-toolbar-primary.search-form .button.media-button.media-button-select").click(function(){
+//	$(".image-heading").css("background-image",'url("' + $("#birch_heading_image").val() + '")');
+//	alert('werwe');
+//	})
+
+	
+	
+	
+	MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
+
+var observer = new MutationObserver(function(mutations, observer) {
+    // fired when a mutation occurs
+//    console.log(mutations, observer);
+    // ...
+	$(".image-heading").css("background-image",'url("' + $("#birch_heading_image").val() + '")');
+});
+
+// define what element should be observed by the observer
+// and what types of mutations trigger the callback
+observer.observe(document, {
+  subtree: true,
+  attributes: true
+  //...
+});
+
+	
 } );//document.ready
 
 

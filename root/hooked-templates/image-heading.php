@@ -3,10 +3,10 @@
 
 function birch_image_heading_css(){
 // Grab the metadata from the database
-$heading_background_color = get_post_meta( get_the_ID(), 'birch_heading_background_color', true );
-$heading_image = get_post_meta( get_the_ID(), 'birch_heading_image', true );
-
-	
+	$heading_background_color = get_post_meta( get_the_ID(), 'birch_heading_background_color', true );
+	$heading_image = get_post_meta( get_the_ID(), 'birch_heading_image', true );
+	$opt = get_post_meta( get_the_ID(), 'bho_options', true );
+	if($opt){
 	?>
 	<style>
 		/*css for the image heading if displayed this get printed into the head tag*/
@@ -48,14 +48,16 @@ $heading_image = get_post_meta( get_the_ID(), 'birch_heading_image', true );
 	</style>
 		
 		<?php	
+	}
 }//birch_image_heading_css
 
-add_action('wp_head', 'birch_image_heading_css',100);
-add_action('admin_head', 'birch_image_heading_css',100);
+
 
 function birch_image_heading(){
 	$heading_text =  get_post_meta( get_the_ID(), 'birch_heading_text', true );
 	$subheading_text =  get_post_meta( get_the_ID(), 'birch_Subheading_text', true );
+	$opt = get_post_meta( get_the_ID(), 'bho_options', true );
+	if($opt){	
 		?>	 
 	 	<div class="image-heading" >
 			<div class="image_heading_statement" id="ih_statement">
@@ -67,6 +69,8 @@ function birch_image_heading(){
 	 	</div>
 	 	 
 	<?php
-}
+	}
+ }
+ 
 
- add_action('storefront_before_content','birch_image_heading'); 
+
