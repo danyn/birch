@@ -1,0 +1,17 @@
+ul#site-header-cart {
+}
+
+.widget_shopping_cart_content {
+    background-color: rgba(27, 25, 25, 0.94);
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+ul.cart_list.product_list_widget {background-color: transparent;}
+
+.widget.woocommerce.widget_shopping_cart.sub-menu--is-touch-device {
+    background: transparent;
+    border: 1px solid black;
+     border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
