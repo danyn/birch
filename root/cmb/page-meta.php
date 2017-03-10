@@ -1,10 +1,43 @@
 <?php
 
+
+
+function birch_heading_options(){
+		$prefix = 'bho_';
+	/**
+	 * Sample metabox to demonstrate each field type included
+	 */
+		$bho = new_cmb2_box( array(
+			'id'            => $prefix . 'metabox',
+			'title'         => esc_html__( 'Birch Page Heading Options', 'cmb2' ),
+			'object_types'  => array( 'page', ), // Post type
+			// 'show_on_cb' => 'birch_show_if_front_page', // function should return a bool value
+
+		) );
+	
+		$bho->add_field( array(
+		'name'             => esc_html__( 'Select Element To Show', 'cmb2' ),
+		'desc'             => esc_html__( 'Choose a type of graphic to display above content and under the nav. Or Choose none to not use this element', 'cmb2' ),
+		'id'               => $prefix . 'options',
+		'type'             => 'radio_inline',
+		'show_option_none' => 'None',
+		'options'          => array(
+			'image_heading' => esc_html__( 'A Banner Image Heading', 'cmb2' ),
+			'flex_slider'   => esc_html__( 'Full Screen Carousel', 'cmb2' ),
+			'seasonal'   => esc_html__( 'Full Height Seasonal graphic', 'cmb2' ),
+//			'none'     => esc_html__( 'none', 'cmb2' ),
+		),//select options array
+	) );
+	
+}//birch_heading_options()
+
 /**
- * Hook in and add a demo metabox. Can only happen on the 'cmb2_admin_init' or 'cmb2_init' hook.
+ * Hook into'cmb2_admin_init' or 'cmb2_init' hook.  Metaboxes for the image heading
  */
 
-function birch_metabox() {
+function birch_image_heading_options() {
+	//call the function that renders the image heading here so we can see what the fields are doing
+	//this also uses js in birch-cmb.js to update the dom based on the input.value
 	add_action( 'cmb2_before_post_form_birch_metabox', 'birch_image_heading' );
 	$prefix = 'birch_';
 	/**
