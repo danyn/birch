@@ -64,7 +64,7 @@ gulp.task('root',function(){
 
 gulp.task('js', function() {
  return gulp.src(jsSources)
-    .pipe(concat('script.js'), {newLine: '\r\n'})
+    .pipe(concat('script.js'))
     .on('error', gutil.log)
     .pipe(gulpif(env === 'production', uglify()))
     .pipe(gulp.dest(outputDir + 'js'));

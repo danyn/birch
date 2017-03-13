@@ -21,3 +21,14 @@ function birch_admin_view_front(){
 	    echo '<style> header#masthead{margin-top:32px !important;}</style>';
 	}
 }
+
+
+function birch_scripts() {
+
+  wp_enqueue_script( 'birchJs', get_stylesheet_directory_uri() . '/js/script.js', array ( 'jquery' ), 1.1, true);
+ 
+  
+}
+add_action( 'wp_enqueue_scripts', 'birch_scripts' ); 
+
+

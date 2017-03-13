@@ -3,5 +3,4 @@ require 'helper-functions.php';
 
 
 
-
-remove_emoji();
+remove_emoji();  
