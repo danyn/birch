@@ -25,9 +25,12 @@ if (env==='development') {
 }
 
 //add as many scripts to this array they will be concatenated
+// js task must be called when adding new files 
 jsSources = [
+	'./scripts/polyfills.js',
+	'./node_modules/enquire.js/dist/enquire.min.js',
   './scripts/script.js'
-];
+	];
 
 //process Sass files from here
 sassSources = './sass/**/*.scss';
@@ -38,7 +41,7 @@ sassThemeSources = './sass_theme_extensions/**/*.scss';
 //copy over all files to be at the root  \ of the theme and deeper using glob *
 rootDir = ['./root/**/*'];
 
-//
+
 
 gulp.task('sassTheme', function () {
  return gulp.src(sassThemeSources)
@@ -55,16 +58,16 @@ gulp.task('sassTheme', function () {
 
 
 gulp.task('root',function(){
-  gulp.src(rootDir)
+  return gulp.src(rootDir)
   .pipe(gulp.dest(outputDir))
 });
 
 gulp.task('js', function() {
-  gulp.src(jsSources)
-    .pipe(concat('script.js'))
+ return gulp.src(jsSources)
+    .pipe(concat('script.js'), {newLine: '\r\n'})
     .on('error', gutil.log)
     .pipe(gulpif(env === 'production', uglify()))
-    .pipe(gulp.dest(outputDir + 'js'))
+    .pipe(gulp.dest(outputDir + 'js'));
 });
 
 
@@ -103,6 +106,6 @@ gulp.task('prefix', function () {
 });
 
 
-gulp.task('default', ['watch','root', 'js','sass','sassTheme']);
+gulp.task('default', ['js','root','sass','sassTheme', 'watch']);
 
 
