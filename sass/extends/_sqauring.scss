@@ -1,0 +1,16 @@
+//this is a basic idea its
+//it won't full work, but can be modified with sass variables
+//that reference the containers width ie. padding etc 
+//and then apply some reduction in the height to reflect this
+//but this is intended for display elements that are almost
+//either screen or half screens is width
+//in this sense it could get close enough to square
+//for heigth in a layout scenario
+
+.fullHeightSquare{
+	height:100vw;
+}
+
+.halfHeightSquare{
+	height: 50vw;
+}

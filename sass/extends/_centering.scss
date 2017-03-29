@@ -1,0 +1,14 @@
+
+//https://css-tricks.com/centering-css-complete-guide/
+
+
+//unknown width and height parent has relative child has absolute
+
+
+.centered-inner{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+

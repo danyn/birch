@@ -1,0 +1,7 @@
+@mixin relative-size($percent) {
+	width:$percent;
+	height:$percent;
+ 	
+}
+
+//.box { @include border-radius(10px); }
