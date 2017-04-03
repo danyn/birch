@@ -36,10 +36,46 @@ add_action( 'wp_enqueue_scripts', 'birch_scripts' );
 //}
 
 
-add_filter( 'woocommerce_subcategory_count_html', 'woo_remove_category_products_count' );
+add_filter( 'woocommerce_subcategory_count_html', 'birch_remove_category_products_count' );
 
-function woo_remove_category_products_count() {
+function birch_remove_category_products_count() {
 	return;
 }
+
+
+
+
+//https://code.tutsplus.com/tutorials/adding-to-the-body-class-in-wordpress--cms-21077
+function birch_body_classes( $classes ) {
+ 
+    $classes[] = 'abba';
+    $classes[] = 'ABBA';
+     
+    return $classes;
+     
+}
+
+function birch_alter_body_classes( $classes ) {
+		if( is_page_template('categorylist.php') ){
+     $classes = array_diff($classes, ["right-sidebar"]);
+		}
+    return $classes;
+		
+}
+
+
+
+
+
+
+//https://gist.github.com/srdco/fa852ebe33bde0e42d7e5834ac7ca61a
+//function birch_fullscreen(){
+//	if( is_page_template('template-categorylist.php') ){
+//		remove_action('storefront_sidebar', 'storefront_get_sidebar',10);
+//	}
+//} 
+
+
+
 
 
