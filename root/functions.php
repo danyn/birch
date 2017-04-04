@@ -86,6 +86,8 @@ class Birch_Layered_Nav extends  WC_Widget_Layered_Nav{
 		$display_type       = isset( $instance['display_type'] ) ? $instance['display_type'] : $this->settings['display_type']['std'];
 //		add a handle for category
 		$category = isset( $instance['category'] ) ? $instance['category'] : $this->settings['category']['std'];
+		//pass an array so that more than on category can be chosen
+		$category = explode(" ", $category);
 		
 		//show only if the category matches needs to be a list though or an array so matches in array. currently 1 str
 		if(!is_product_category( $category )){
