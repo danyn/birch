@@ -3,7 +3,7 @@
 
 	class Birch_Layered_Nav extends  WC_Widget_Layered_Nav{
 		public function __construct() {
-		$this->widget_cssclass    = 'woocommerce widget_layered_nav';
+		$this->widget_cssclass    = 'woocommerce widget_layered_nav birch_layered_nav';
 		$this->widget_description = __( 'Shows a custom attribute in a widget which lets you narrow down the list of products when viewing product categories.', 'woocommerce' );
 		$this->widget_id          = 'birch_layered_nav';
 		$this->widget_name        = __( 'Birch Layered Nav', 'woocommerce' );
